@@ -1,8 +1,8 @@
 USE SAKILA 
 
 -- Desafío 1
+-- Debe utilizar las funciones integradas de SQL para obtener información relacionada con la duración de las películas. 
 
--- Debe utilizar las funciones integradas de SQL para obtener información relacionada con la duración de las películas:
 -- 1.1 Determine las duraciones más cortas y más largas de las películas y nombre los valores como max_duration y min_duration.
     SELECT MAX(length) AS max_duration, MIN(length) AS min_duration FROM film; 
 
@@ -12,10 +12,7 @@ USE SAKILA
 
 -- 2 Necesita obtener información relacionada con las fechas de alquiler:
 -- 2.1 Calcular el número de días que la empresa lleva operando.
-
     SELECT DATEDIFF(MAX(rental_date), MIN(rental_date)) FROM rental; 
--- Sugerencia: para hacer esto, utilice la rental tabla y la DATEDIFF() función
--- para restar la fecha más antigua en la rental_date columna de la fecha más reciente.
 
 
 -- 2.2 Recupere información de alquiler y agregue dos columnas adicionales para mostrar el mes y el día de la semana del alquiler. 
