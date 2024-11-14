@@ -12,9 +12,9 @@ USE SAKILA
 
 -- 2 Necesita obtener información relacionada con las fechas de alquiler:
 -- 2.1 Calcular el número de días que la empresa lleva operando.
-
 -- Sugerencia: para hacer esto, utilice la rental tabla y la DATEDIFF() función
 -- para restar la fecha más antigua en la rental_date columna de la fecha más reciente.
+
     SELECT DATEDIFF(MAX(rental_date), MIN(rental_date)) FROM rental; 
 
 
